@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Voting</title>
+        <!-- Favicon-->
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="/">Informed Voting</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/explore">Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/news">Recent News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 h-100">
+                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+                    <div class="col-lg-8 align-self-end">
+                        <h1 class="text-white font-weight-bold">Political Survey</h1>
+                        <hr class="divider" />
+                    </div>
+                    <div class="row">
+    <center>
+        <div class="card" style="width: 70rem;">
+        <div class="card-body text-center">
+          <h2 class="card-title">Political Survey</h4>
+<form method="POST" enctype = "multipart/form-data">
+        <h4> Fill out this survey to figure out the candidate with the most matching political beliefs with you.  </h3> <br><br>
+        
+        <label for="gun">Gun control laws need to be reformed:</label>
+        <select name="q1">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+        
+      
+        
+        <label for="corp">Corporations should not be allowed to interfere in political campaigns</label>
+        <select name="q2">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="corp2">The government should increase incentives for corporates who are environment-friendly</label>
+        <select name="q3">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="diverse">Diversity is crucial to America’s development as a nation</label>
+        <select name="q4">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="borders">The benefits of open borders outweigh the risks</label>
+        <select name="q5">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="religion">Religious freedom is critical</label>
+        <select name="q6">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="politico">Lawmakers should represent their own interests instead of the people</label>
+        <select name="q7">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="immigration">Immigration is important for the economy.</label>
+        <select name="q8">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="gender">People have the right to choose which gender(s) they identify with, if any at all.</label>
+        <select name="q9">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="minorties">Minority groups should be equal to the majority groups.</label>
+        <select name="q10">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="police">Police departments need reform.</label>
+        <select name="q11">
+<option value="6" selected="selected">Select an Option</option>
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="immigration2">Illegal immigrants should have access to government-subsidized healthcare.</label>
+        <select name="q12">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="immigration3">Building a wall would do more harm than good.</label>
+        <select name="q13">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="vaccine">The government has the right to issue vaccine mandates.</label>
+        <select name="q14">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+
+        <label for="religion">Environment safety is more important than business tax revenue.</label>
+        <select name="q15">
+<option value="6" selected="selected">Select an Option</option>
+
+          <option value="5">Strongly Agree</option>
+          <option value="4">Agree</option>
+          <option value="3">Neutral</option>
+          <option value="2">Disagree</option>
+          <option value="1">Strongly Disagree</option>
+        </select><br><br>
+            <div class="input-group mb-3">
+                <center><textarea margin-left="50%" name="manifesto" cols="110" rows="10" placeholder="Enter your political statement. This will help voters get to know more about your beliefs and viewpoints." id='textareamanifesto'></textarea>
+                </center>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" name="avatar" class="form-control" placeholder="Avatar Url" aria-describedby="basic-addon2">
+            </div>
+            
+        <br><br>
+        <input type="submit" value="Submit">
+	
+      </form>
+          
+        </div>
+      </div>
+    </div>
+    </center>
+      
+  </div>
+            </div>
+                    <div class="col-lg-8 align-self-baseline">
+                        <p class="text-white-75 mb-5">Register for our service</p>
+                    </div>
+                </div>
+                
+
+        </header>
+
+
+      
+
+
+
+
+
+       
+        <!-- Call to action-->
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
